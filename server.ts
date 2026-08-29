@@ -3,7 +3,7 @@ import express, { Request, Response } from 'express';
 import path from 'path';
 import fs from 'fs';
 import JSZip from 'jszip';
-import { createServer as createViteServer } from 'vite';
+
 import { 
   INITIAL_USERS, 
   INITIAL_AUDIT_LOGS, 
@@ -802,6 +802,7 @@ if (process.env.VERCEL !== '1') {
 
     // Vite middleware for development vs static build serving for production
     if (process.env.NODE_ENV !== 'production') {
+      const { createServer: createViteServer } = await import('vite');
       const vite = await createViteServer({
         server: { middlewareMode: true },
         appType: 'spa'
