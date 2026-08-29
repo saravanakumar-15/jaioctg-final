@@ -792,25 +792,27 @@ export function createApp() {
   return app;
 }
 
+// Local development or standalone container listener (bypassed when deployed to Vercel)
 const app = createApp();
 export default app;
 
-// Local development or standalone container listener (bypassed when deployed to Vercel)
-if (process.env.VERCEL !== '1') {
+if (!process.env.VERCEL && process.env.NODE_ENV !== 'test') {
   async function initServer() {
     const PORT = Number(process.env.PORT) || 3000;
 
-    // Vite middleware for development vs static build serving for production
     if (process.env.NODE_ENV !== 'production') {
       const { createServer: createViteServer } = await import('vite');
+
       const vite = await createViteServer({
         server: { middlewareMode: true },
         appType: 'spa'
       });
+
       app.use(vite.middlewares);
     } else {
       const distPath = path.join(process.cwd(), 'dist');
       app.use(express.static(distPath));
+
       app.get('*', (_req: Request, res: Response) => {
         res.sendFile(path.join(distPath, 'index.html'));
       });
