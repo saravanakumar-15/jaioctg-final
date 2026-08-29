@@ -1,0 +1,14 @@
+{
+  "buildCommand": "vite build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api"
+    },
+    {
+      "source": "/((?!api/|assets/|uploads/|favicon\\.ico|logo\\.svg|.*\\..*).*)",
+      "destination": "/index.html"
+    }
+  ]
+}

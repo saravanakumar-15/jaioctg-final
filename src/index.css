@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .glass-card {
+    background-color: rgba(33, 84, 165, 0.35);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 40px -15px rgba(13, 36, 75, 0.6);
+  }
+
+  .glass-card-interactive {
+    background-color: rgba(33, 84, 165, 0.3);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 40px -15px rgba(13, 36, 75, 0.6);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .glass-card-interactive:hover {
+    background-color: rgba(43, 101, 194, 0.5);
+    border-color: rgba(255, 255, 255, 0.35);
+    transform: translateY(-2px);
+    box-shadow: 0 25px 50px -12px rgba(33, 84, 165, 0.5);
+  }
+
+  .glass-nav {
+    background-color: rgba(19, 53, 108, 0.9);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .glass-input {
+    background-color: rgba(13, 36, 75, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    transition: all 0.2s ease;
+  }
+
+  .glass-input:focus {
+    background-color: rgba(26, 67, 132, 0.85);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 0 3px rgba(147, 197, 253, 0.3);
+  }
+
+  .glass-button-primary {
+    background: linear-gradient(135deg, #2154A5, #163B75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 25px -5px rgba(33, 84, 165, 0.5);
+    transition: all 0.2s ease;
+  }
+
+  .glass-button-primary:hover {
+    background: linear-gradient(135deg, #2A66C4, #2154A5);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 15px 30px -5px rgba(42, 102, 196, 0.6);
+  }
+}

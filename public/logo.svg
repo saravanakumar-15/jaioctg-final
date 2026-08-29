@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" width="240" height="200" fill="none">
+  <defs>
+    <!-- Blue 'J' Gradient -->
+    <linearGradient id="jai-blue-grad" x1="120" y1="20" x2="120" y2="160" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00AEEF"/>
+      <stop offset="40%" stop-color="#0072CE"/>
+      <stop offset="100%" stop-color="#1B2B85"/>
+    </linearGradient>
+    
+    <!-- Ship Green Gradient -->
+    <linearGradient id="jai-ship-grad" x1="20" y1="120" x2="220" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#88C100"/>
+      <stop offset="100%" stop-color="#6B9B00"/>
+    </linearGradient>
+
+    <!-- Wave Cyan-Blue Gradient -->
+    <linearGradient id="jai-wave-grad" x1="10" y1="170" x2="230" y2="195" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00C3FF"/>
+      <stop offset="50%" stop-color="#0092E0"/>
+      <stop offset="100%" stop-color="#0066C0"/>
+    </linearGradient>
+
+    <filter id="subtle-shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Waves at the base -->
+  <g id="waves">
+    <path d="M 12 178 C 50 166, 90 190, 135 178 C 170 168, 200 184, 228 175 C 210 183, 175 175, 135 186 C 90 198, 45 174, 12 178 Z" fill="url(#jai-wave-grad)" />
+    <path d="M 22 188 C 65 176, 105 198, 150 187 C 185 178, 212 191, 235 184 C 215 192, 180 184, 148 194 C 105 206, 58 184, 22 188 Z" fill="url(#jai-wave-grad)" opacity="0.85" />
+    <path d="M 40 196 C 80 186, 120 204, 160 195 C 190 188, 215 198, 232 194 C 210 200, 180 194, 155 201 C 115 210, 75 193, 40 196 Z" fill="url(#jai-wave-grad)" opacity="0.6" />
+  </g>
+
+  <!-- Ship / Vessel silhouette -->
+  <g id="vessel" filter="url(#subtle-shadow)">
+    <!-- Hull -->
+    <path d="M 25 168 C 23 162, 28 152, 40 152 L 70 152 C 72 144, 76 138, 76 132 L 80 132 C 80 138, 80 144, 80 152 L 140 152 C 142 140, 145 125, 150 118 C 158 118, 168 122, 170 132 L 170 152 L 195 142 C 208 136, 218 133, 228 136 C 220 152, 195 168, 175 172 C 120 174, 60 173, 25 168 Z" fill="url(#jai-ship-grad)" />
+    
+    <!-- Mast Flag -->
+    <path d="M 72 135 L 72 122 L 62 126 L 72 130 Z" fill="#6B9B00" />
+    
+    <!-- Portholes / Windows on Hull -->
+    <circle cx="50" cy="159" r="1.8" fill="#FFFFFF" opacity="0.9" />
+    <circle cx="58" cy="159" r="1.8" fill="#FFFFFF" opacity="0.9" />
+    <circle cx="66" cy="159" r="1.8" fill="#FFFFFF" opacity="0.9" />
+    <circle cx="180" cy="153" r="2" fill="#FFFFFF" opacity="0.9" />
+    <circle cx="190" cy="149" r="2" fill="#FFFFFF" opacity="0.9" />
+    <circle cx="200" cy="145" r="2" fill="#FFFFFF" opacity="0.9" />
+    <circle cx="210" cy="142" r="1.8" fill="#FFFFFF" opacity="0.9" />
+  </g>
+
+  <!-- Stylized Letter 'J' -->
+  <g id="letter-j" filter="url(#subtle-shadow)">
+    <!-- Dot of J -->
+    <circle cx="128" cy="32" r="15" fill="url(#jai-blue-grad)" />
+    
+    <!-- Main stem and hook of J -->
+    <path d="M 112 76 C 104 80, 108 73, 116 71 C 128 68, 142 66, 142 66 L 142 120 C 142 142, 125 158, 100 158 C 82 158, 70 146, 68 130 C 80 130, 92 122, 95 110 C 85 115, 72 122, 68 130 C 66 115, 82 98, 95 90 C 88 102, 92 118, 102 122 C 114 126, 126 118, 126 102 L 126 76 C 120 76, 115 76, 112 76 Z" fill="url(#jai-blue-grad)" />
+    <path d="M 115 71 C 105 73, 102 80, 112 76 L 126 76 L 126 112 C 126 132, 112 146, 92 146 C 76 146, 68 136, 68 126 C 78 126, 88 118, 92 108 C 82 114, 72 120, 68 126 C 66 112, 80 96, 95 88 C 88 100, 92 114, 100 118 C 110 122, 120 114, 120 100 L 120 71 Z" fill="url(#jai-blue-grad)" />
+  </g>
+</svg>
