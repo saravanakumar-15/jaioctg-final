@@ -20,7 +20,7 @@ export const INITIAL_USERS: User[] = [
     email: 'r.sharma@jaioctginspection.com',
     password: 'password123',
     role: 'Super Admin',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150',
+    avatar: '/image/jaisankar.jpg',
     company: 'JAI OCTG Inspection Services Pte Ltd',
     status: 'Active',
     createdAt: '2023-03-10',
@@ -608,10 +608,10 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "3000:3000"
+      - "3001:3001"
     environment:
       - NODE_ENV=production
-      - PORT=3000
+      - PORT=3001
       - DATABASE_URL=\${DATABASE_URL}
     restart: always
 
